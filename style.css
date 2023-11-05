@@ -1,83 +1,96 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-.game-board {
+html, body, #fullheight {
+    min-height: 100% !important;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+
+.container {
+    height: 100%;
+    background-color: black;
+}
+
+.result {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: white;
+    height: 39%;
+}
+
+.result span {
+    margin-right: 60px;
+    font-size: 210px;
+    justify-self: flex-end;
+}
+
+.buttons {
     width: 100%;
-    height: 500px;
-    border-bottom: 15px solid green;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(#87ceeb,  red);
+    height: 60%;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;    
 }
 
-.pipe {
-    position: absolute;
-    bottom: 0;
-    width: 70px;
-    animation: pipe-animation 1.0s infinite linear;
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    color: white;
+    border-radius: 100%;
+    width: 210px;
+    height: 210px;
+    padding: 10px;
+    cursor: pointer;
+    align-self: center;
+    justify-self: center;
 }
 
-.sol {
-    position: static;
-    width: 150px;
-    left: 800px;
-    bottom: 280px;
-}
-.mario {
-    width: 150px;
-    position: absolute;
-    bottom: 0;
+.percent {
+    background-color: #a5a5a5;
+    border: none;
+    color: black;
 }
 
-.jump {
-    animation: jump 500ms ease-out;
+.item1 {
+    background-color: #a5a5a5;
+    border: none;
+    
 }
 
-.clouds {
-    position: absolute;
-    width: 550px;
-    animation: clouds-animation 20s infinite linear;
+.item3 {
+    background-color: #ff9f0a;
+    border: none;
 }
 
-@keyframes pipe-animation {
-    from {
-        right: 0;
-
-    }
-    to {
-        right: 100%;
-    }
-
+.numbers, .comma {
+    background-color: #343434;
+    border: none;
 }
 
-@keyframes jump{
-    0% {
-        bottom: 0;
-    }
-    40% {
-        bottom: 180px;
-    }
-    50% {
-        bottom: 180px;
-    }
-    60% {
-        bottom: 180px;
-    }
-    100%{
-        bottom: 0;
-    }
+.negative, .clear {
+    color: black;
 }
 
-@keyframes clouds-animation {
-    from {
-        right: -550px;
-    }
+.itemZero {
+    background-color: #343434;
+    width: 435px;
+    border-radius: 135px;
+    grid-column: span 2;
+    border: none;
+}
 
-    to {
-        right: 100%;
-    }
+.selecedSigh {
+    background-color: white;
+    color: #ff9f0a;
+}
+
+.changedStyles {
+    font-size: 10px;
 }
